@@ -111,7 +111,18 @@
         <Compile Include="Factory\MyPlayerFactory.cs" />
         <Compile Include="ModifierRoller.cs" />
         <Compile Include="Modifiers\BypassForAll.cs" />
+        <Compile Include="Modifiers\Fuck079InParticular.cs" />
+        <Compile Include="Modifiers\GhostParty.cs" />
+        <Compile Include="Modifiers\Hitman.cs" />
+        <Compile Include="Modifiers\IAmFree.cs" />
+        <Compile Include="Modifiers\IAmSpeed.cs" />
         <Compile Include="Modifiers\IBase.cs" />
+        <Compile Include="Modifiers\InfinitePower.cs" />
+        <Compile Include="Modifiers\NinetyFourInSix.cs" />
+        <Compile Include="Modifiers\PowerOutage.cs" />
+        <Compile Include="Modifiers\SkinnyBois.cs" />
+        <Compile Include="Modifiers\SwapIt.cs" />
+        <Compile Include="Modifiers\ZombieApocalypse.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>

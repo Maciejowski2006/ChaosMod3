@@ -28,6 +28,16 @@ namespace ChaosMod3
 		private ModifierRoller()
 		{
 			modifiers.Add(new BypassForAll());
+			modifiers.Add(new Fuck079InParticular());
+			modifiers.Add(new GhostParty());
+			modifiers.Add(new Hitman());
+			modifiers.Add(new IAmFree());
+			modifiers.Add(new IAmSpeed());
+			modifiers.Add(new InfinitePower());
+			modifiers.Add(new NinetyFourInSix());
+			modifiers.Add(new PowerOutage());
+			modifiers.Add(new SkinnyBois());
+			modifiers.Add(new SwapIt());
 		}
 
 		private IBase RollModifier()
