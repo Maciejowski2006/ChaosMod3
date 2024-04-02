@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using ChaosMod3.Configs;
 using ChaosMod3.Factory;
+using MEC;
 using PlayerRoles;
 using PluginAPI.Core;
 using PluginAPI.Core.Attributes;
@@ -61,6 +62,36 @@ namespace ChaosMod3
 				Log.Info($"Player online &6{plr.Nickname}&r, role &6{plr.Role}&r");
 			}
 		}
+
+		private bool roundEnded;
+		private CoroutineHandle coroutine;
+		
+		[PluginEvent(ServerEventType.RoundStart)]
+		void OnRoundStart()
+		{
+			coroutine = Timing.RunCoroutine(ChaosLoop());
+		}
+
+		[PluginEvent(ServerEventType.RoundEnd)]
+		void OnRoundEnd(RoundSummary.LeadingTeam team)
+		{
+			Timing.KillCoroutines(coroutine);
+		}
+
+		private IEnumerator<float> ChaosLoop()
+		{
+			ModifierRoller api = ModifierRoller.Instance();
+
+			while (!roundEnded)
+			{
+				yield return Timing.WaitForSeconds(60);
+				api.NewModifier();
+			}
+
+			api.RemoveModifier();
+			roundEnded = false;
+		}
+		
 		
 		[PluginConfig] public MainConfig PluginConfig;
 

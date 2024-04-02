@@ -12,6 +12,7 @@
         <AssemblyName>ChaosMod3</AssemblyName>
         <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
+        <LangVersion>9</LangVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -108,6 +109,9 @@
         <Compile Include="EventHandlers.cs" />
         <Compile Include="Factory\MyPlayer.cs" />
         <Compile Include="Factory\MyPlayerFactory.cs" />
+        <Compile Include="ModifierRoller.cs" />
+        <Compile Include="Modifiers\BypassForAll.cs" />
+        <Compile Include="Modifiers\IBase.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
