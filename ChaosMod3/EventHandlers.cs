@@ -391,5 +391,4 @@ namespace ChaosMod3
 			Log.Info($"&rSCP-914 process &6{ev.Player.Nickname}&r with KnobSetting {ev.KnobSetting} and will exit in the {ev.OutPosition} position.");
 		}
 	}
-
 }

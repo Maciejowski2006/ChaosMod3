@@ -48,19 +48,6 @@ namespace ChaosMod3
 
 			AnotherConfig.TestList = new List<string>() { "Template0" };
 			handler.SaveConfig(this, nameof(AnotherConfig));
-
-			if(Player.TryGet("hubert@northwood", out Player plr))
-				plr.Role = RoleTypeId.NtfCaptain;
-		}
-		[PluginEvent(ServerEventType.PlayerJoined)]
-		void OnPlayerJoin(Player player)
-		{
-			Log.Info($"Player &6{player.UserId}&r joined this server");
-
-			foreach (var plr in Player.GetPlayers())
-			{
-				Log.Info($"Player online &6{plr.Nickname}&r, role &6{plr.Role}&r");
-			}
 		}
 
 		private bool roundEnded;
