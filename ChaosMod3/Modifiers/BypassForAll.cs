@@ -1,6 +1,4 @@
-﻿using System;
-using CommandSystem.Commands.Console;
-using PluginAPI.Core;
+﻿using PluginAPI.Core;
 
 namespace ChaosMod3.Modifiers
 {

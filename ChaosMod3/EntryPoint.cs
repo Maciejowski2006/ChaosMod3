@@ -2,7 +2,6 @@
 using ChaosMod3.Configs;
 using ChaosMod3.Factory;
 using MEC;
-using PlayerRoles;
 using PluginAPI.Core;
 using PluginAPI.Core.Attributes;
 using PluginAPI.Enums;

@@ -1,6 +1,4 @@
-﻿
-
-using MapGeneration.Distributors;
+﻿using MapGeneration.Distributors;
 
 namespace ChaosMod3.Modifiers
 {
