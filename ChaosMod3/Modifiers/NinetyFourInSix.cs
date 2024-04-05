@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using PluginAPI.Core;
+﻿using PluginAPI.Core;
 
 namespace ChaosMod3.Modifiers
 {
@@ -8,7 +7,7 @@ namespace ChaosMod3.Modifiers
 		public string Name { get; } = "94 in 6...";
 		public void Execute()
 		{
-			foreach (var player in Player.GetPlayers())
+			foreach (Player player in Player.GetPlayers())
 			{
 				if (player.IsSCP)
 					return;
@@ -20,7 +19,7 @@ namespace ChaosMod3.Modifiers
 		}
 		public void RevertChanges()
 		{
-			foreach (var player in Player.GetPlayers())
+			foreach (Player player in Player.GetPlayers())
 			{
 				if (player.IsSCP)
 					return;

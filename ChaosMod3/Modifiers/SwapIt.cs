@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using PlayerRoles;
 using PluginAPI.Core;
 using UnityEngine;
 
@@ -15,7 +14,7 @@ namespace ChaosMod3.Modifiers
 			players.ForEach(p => { positions.Add(p.Position); });
 
 			int j = players.Count;
-			foreach (var player in players)
+			foreach (Player player in players)
 			{
 				player.Position = positions[j];
 				j--;

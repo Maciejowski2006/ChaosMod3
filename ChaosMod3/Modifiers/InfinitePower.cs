@@ -1,4 +1,4 @@
-﻿using ChaosMod3.Commands;
+﻿using PluginAPI.Core;
 
 namespace ChaosMod3.Modifiers
 {
@@ -7,7 +7,7 @@ namespace ChaosMod3.Modifiers
 		public string Name { get; } = "Infinite power";
 		public void Execute()
 		{
-			foreach (var tesla in PluginAPI.Core.Map.TeslaGates)
+			foreach (TeslaGate tesla in Map.TeslaGates)
 			{
 				tesla.windupTime = 0f;
 				tesla.cooldownTime = 0;
@@ -15,7 +15,7 @@ namespace ChaosMod3.Modifiers
 		}
 		public void RevertChanges()
 		{
-			foreach (var tesla in PluginAPI.Core.Map.TeslaGates)
+			foreach (TeslaGate tesla in Map.TeslaGates)
 			{
 				tesla.windupTime = 1f;
 				tesla.cooldownTime = 1f;

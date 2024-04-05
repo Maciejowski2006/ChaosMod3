@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using CustomPlayerEffects;
+﻿using CustomPlayerEffects;
 using PluginAPI.Core;
 
 namespace ChaosMod3.Modifiers
@@ -9,14 +8,14 @@ namespace ChaosMod3.Modifiers
 		public string Name { get; } = "I am speed";
 		public void Execute()
 		{
-			foreach (var player in Player.GetPlayers())
+			foreach (Player player in Player.GetPlayers())
 			{
 				Scp207 t = player.EffectsManager.EnableEffect<Scp207>(ChaosMod3.Singleton.PluginConfig.Delay);
 			}
 		}
 		public void RevertChanges()
 		{
-			foreach (var player in Player.GetPlayers())
+			foreach (Player player in Player.GetPlayers())
 			{
 				player.EffectsManager.DisableEffect<Scp207>();
 			}
