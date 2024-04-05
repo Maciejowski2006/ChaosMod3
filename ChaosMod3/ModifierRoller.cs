@@ -28,9 +28,7 @@ namespace ChaosMod3
 		private ModifierRoller()
 		{
 			Modifiers.Add(new BypassForAll());
-			Modifiers.Add(new Fuck079InParticular());
-			Modifiers.Add(new BypassForAll());
-			Modifiers.Add(new Fuck079InParticular());
+			// Modifiers.Add(new Fuck079InParticular());
 			// modifiers.Add(new GhostParty());
 			Modifiers.Add(new Hitman());
 			Modifiers.Add(new IAmFree());
