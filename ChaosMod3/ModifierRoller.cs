@@ -52,9 +52,10 @@ namespace ChaosMod3
 				currentModifier = modifiers[forceNextModifier];
 				forceNextModifier = -1;
 			}
-			else if (false)
+			else if (ChaosMod3.Singleton.PluginConfig.ForceMod != -1)
 			{
 				// Force a modifer from config
+				currentModifier = modifiers[ChaosMod3.Singleton.PluginConfig.ForceMod];
 			}
 			else
 			{

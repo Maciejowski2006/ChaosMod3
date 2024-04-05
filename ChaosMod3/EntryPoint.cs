@@ -44,9 +44,6 @@ namespace ChaosMod3
 			
 			PluginConfig.StringValue = "test Value";
 			handler.SaveConfig(this, nameof(PluginConfig));
-
-			AnotherConfig.TestList = new List<string>() { "Template0" };
-			handler.SaveConfig(this, nameof(AnotherConfig));
 		}
 
 		private bool roundEnded;
@@ -70,7 +67,7 @@ namespace ChaosMod3
 
 			while (!roundEnded)
 			{
-				yield return Timing.WaitForSeconds(60);
+				yield return Timing.WaitForSeconds(PluginConfig.Delay);
 				api.NewModifier();
 			}
 
@@ -80,8 +77,5 @@ namespace ChaosMod3
 		
 		
 		[PluginConfig] public MainConfig PluginConfig;
-
-		[PluginConfig("configs/another-config.yml")]
-		public AnotherConfig AnotherConfig;
 	}
 }

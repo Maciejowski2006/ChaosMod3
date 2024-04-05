@@ -103,7 +103,6 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Commands\TestCommand.cs" />
-        <Compile Include="Configs\AnotherConfig.cs" />
         <Compile Include="Configs\MainConfig.cs" />
         <Compile Include="EntryPoint.cs" />
         <Compile Include="EventHandlers.cs" />

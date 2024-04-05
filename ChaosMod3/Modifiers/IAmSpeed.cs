@@ -11,8 +11,7 @@ namespace ChaosMod3.Modifiers
 		{
 			foreach (var player in Player.GetPlayers())
 			{
-				Scp207 t = player.EffectsManager.EnableEffect<Scp207>(60);
-				
+				Scp207 t = player.EffectsManager.EnableEffect<Scp207>(ChaosMod3.Singleton.PluginConfig.Delay);
 			}
 		}
 		public void RevertChanges()
