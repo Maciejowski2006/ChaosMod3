@@ -37,7 +37,7 @@ namespace ChaosMod3
 			Modifiers.Add(new IAmSpeed());
 			Modifiers.Add(new InfinitePower());
 			Modifiers.Add(new NinetyFourInSix());
-			// modifiers.Add(new PowerOutage());
+			Modifiers.Add(new PowerOutage());
 			// modifiers.Add(new SkinnyBois());
 			// modifiers.Add(new SwapIt());
 		}
