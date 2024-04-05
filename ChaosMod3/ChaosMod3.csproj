@@ -12,7 +12,7 @@
         <AssemblyName>ChaosMod3</AssemblyName>
         <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
-        <LangVersion>9</LangVersion>
+        <LangVersion>11</LangVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -102,7 +102,8 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Commands\TestCommand.cs" />
+        <Compile Include="Commands\ForceModCommand.cs" />
+        <Compile Include="Commands\ListModsCommand.cs" />
         <Compile Include="Configs\MainConfig.cs" />
         <Compile Include="EntryPoint.cs" />
         <Compile Include="EventHandlers.cs" />

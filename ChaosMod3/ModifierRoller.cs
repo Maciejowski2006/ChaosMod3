@@ -21,20 +21,22 @@ namespace ChaosMod3
 			return instance;
 		}
 		
-		private List<IBase> modifiers = new();
+		public List<IBase> Modifiers { get; } = new();
 		private IBase oldModifier;
-		public int forceNextModifier = -1;
+		public int ForceNextModifier = -1;
 
 		private ModifierRoller()
 		{
-			modifiers.Add(new BypassForAll());
-			modifiers.Add(new Fuck079InParticular());
+			Modifiers.Add(new BypassForAll());
+			Modifiers.Add(new Fuck079InParticular());
+			Modifiers.Add(new BypassForAll());
+			Modifiers.Add(new Fuck079InParticular());
 			// modifiers.Add(new GhostParty());
-			modifiers.Add(new Hitman());
+			Modifiers.Add(new Hitman());
 			// modifiers.Add(new IAmFree());
-			modifiers.Add(new IAmSpeed());
-			modifiers.Add(new InfinitePower());
-			modifiers.Add(new NinetyFourInSix());
+			Modifiers.Add(new IAmSpeed());
+			Modifiers.Add(new InfinitePower());
+			Modifiers.Add(new NinetyFourInSix());
 			// modifiers.Add(new PowerOutage());
 			// modifiers.Add(new SkinnyBois());
 			// modifiers.Add(new SwapIt());
@@ -43,24 +45,24 @@ namespace ChaosMod3
 		private IBase RollModifier()
 		{
 			// Roll new modifier
-			int modifierIndex = Random.Range(0, modifiers.Count);
+			int modifierIndex = Random.Range(0, Modifiers.Count - 1);
 			IBase currentModifier;
 
 			// Check if forcemod is set to any number apart from -1
-			if (forceNextModifier != -1)
+			if (ForceNextModifier != -1)
 			{
-				currentModifier = modifiers[forceNextModifier];
-				forceNextModifier = -1;
+				currentModifier = Modifiers[ForceNextModifier];
+				ForceNextModifier = -1;
 			}
 			else if (ChaosMod3.Singleton.PluginConfig.ForceMod != -1)
 			{
 				// Force a modifer from config
-				currentModifier = modifiers[ChaosMod3.Singleton.PluginConfig.ForceMod];
+				currentModifier = Modifiers[ChaosMod3.Singleton.PluginConfig.ForceMod];
 			}
 			else
 			{
 				// Set a modifer rolled beforehand
-				currentModifier = modifiers[modifierIndex];
+				currentModifier = Modifiers[modifierIndex];
 			}
 
 			oldModifier = currentModifier;
