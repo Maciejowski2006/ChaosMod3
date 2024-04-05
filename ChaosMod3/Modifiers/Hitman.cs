@@ -1,17 +1,13 @@
 ﻿using System.Collections.Generic;
 using InventorySystem.Items;
-using PlayerRoles;
 using PluginAPI.Core;
-using PluginAPI.Core.Items;
-using Quaternion = UnityEngine.Quaternion;
-using Vector3 = UnityEngine.Vector3;
 
 namespace ChaosMod3.Modifiers
 {
 	public class Hitman : IBase
 	{
 		public string Name { get; } = "Hitman";
-		private List<ItemBase> spawnedItems;
+		private List<ItemBase> spawnedItems = new();
 		public void Execute()
 		{
 			foreach (Player player in Player.GetPlayers())
@@ -27,7 +23,7 @@ namespace ChaosMod3.Modifiers
 		{
 			foreach (ItemBase com in spawnedItems)
 			{
-				Item.Remove(com);
+				Player.GetPlayers()[0].RemoveItems(ItemType.GunCOM15);
 			}
 		}
 	}
