@@ -1,13 +1,13 @@
-﻿using ChaosMod3.Factory;
-using PluginAPI.Core;
+﻿using PluginAPI.Core;
 using PluginAPI.Core.Attributes;
 using PlayerRoles.PlayableScps.Scp173;
 using PluginAPI.Events;
 
 namespace ChaosMod3
 {
-		public class EventHandlers
+	public class EventHandlers
 	{
+		/*
 		[PluginEvent]
 		public void OnWarheadStart(WarheadStartEvent ev)
 		{
@@ -390,5 +390,6 @@ namespace ChaosMod3
 		{
 			Log.Info($"&rSCP-914 process &6{ev.Player.Nickname}&r with KnobSetting {ev.KnobSetting} and will exit in the {ev.OutPosition} position.");
 		}
+		*/
 	}
 }
