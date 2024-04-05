@@ -33,7 +33,7 @@ namespace ChaosMod3
 			Modifiers.Add(new Fuck079InParticular());
 			// modifiers.Add(new GhostParty());
 			Modifiers.Add(new Hitman());
-			// modifiers.Add(new IAmFree());
+			Modifiers.Add(new IAmFree());
 			Modifiers.Add(new IAmSpeed());
 			Modifiers.Add(new InfinitePower());
 			Modifiers.Add(new NinetyFourInSix());

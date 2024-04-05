@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using PluginAPI.Core;
+using UnityEngine;
 
 namespace ChaosMod3.Modifiers
 {
@@ -8,12 +9,11 @@ namespace ChaosMod3.Modifiers
 
 		public void Execute()
 		{
-			PluginAPI.Core.Map.ChangeColorOfAllLights(new Color(0, 0, 0));
+			Map.FlickerAllLights(ChaosMod3.Singleton.PluginConfig.Delay);
 		}
 
 		public void RevertChanges()
 		{
-			PluginAPI.Core.Map.ResetColorOfAllLights();
 		}
 	}
 }
