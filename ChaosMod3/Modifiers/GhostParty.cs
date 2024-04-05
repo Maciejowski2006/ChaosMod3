@@ -7,7 +7,7 @@ namespace ChaosMod3.Modifiers
 	public class GhostParty : IBase
 	{
 		public string Name { get; } = "Ghost Party";
-		private List<MeshRenderer> meshRenderers;
+		private List<MeshRenderer> meshRenderers = new();
 		public void Execute()
 		{
 			Player.GetPlayers().ForEach(player => { meshRenderers.Add(player.GameObject.GetComponent<MeshRenderer>()); });
