@@ -17,13 +17,14 @@ namespace ChaosMod3.Modifiers
 				
 				ItemBase com = player.AddItem(ItemType.GunCOM15);
 				spawnedItems.Add(com);
+				player.AddAmmo(ItemType.Ammo9x19, 12);
 			}
 		}
 		public void RevertChanges()
 		{
-			foreach (ItemBase com in spawnedItems)
+			foreach (Player player in Player.GetPlayers())
 			{
-				Player.GetPlayers()[0].RemoveItems(ItemType.GunCOM15);
+				player.RemoveItems(ItemType.GunCOM15);
 			}
 		}
 	}
